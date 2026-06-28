@@ -1,0 +1,49 @@
+# 基础工具包
+pip==24.0
+setuptools==69.5.1
+wheel==0.43.0
+ipython==8.24.0
+jupyter==1.0.0
+notebook==7.2.1
+
+# 数据处理与分析包
+numpy==1.26.4
+pandas==2.2.2
+scipy==1.13.0
+openpyxl==3.1.2
+xlrd==2.0.1
+python-dateutil==2.9.0.post0
+pytz==2024.1
+
+# 数据可视化包
+matplotlib==3.9.0
+seaborn==0.13.2
+plotly==5.22.0
+missingno==0.5.2
+
+# 传统时间序列模型包
+statsmodels==0.14.2
+prophet==1.1.5
+pmdarima==2.0.4
+
+# 机器学习模型包（核心）
+scikit-learn==1.5.0
+xgboost==2.0.3
+lightgbm==4.3.0
+catboost==1.2.5
+
+# 深度学习框架（CPU版本）
+tensorflow==2.15.0
+tensorflow-intel==2.15.0
+keras
+
+# 模型调优与融合包
+optuna==3.6.1
+hyperopt==0.2.7
+scikit-optimize==0.10.2
+mlxtend==0.23.1
+
+# 其他实用工具包
+tqdm==4.66.4
+joblib==1.4.2
+pickle-mixin==1.0.2
