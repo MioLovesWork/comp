@@ -3,5 +3,7 @@ __pycache__/
 
 catboost_info/
 *.csv
+data/*
+!data/.gitkeep
 
 记忆.md

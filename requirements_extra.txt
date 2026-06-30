@@ -1,9 +1,0 @@
-# Extra deps for dinov3 env (PyTorch GPU tuning). torch is already in dinov3.
-# Install: conda activate dinov3 && pip install -r requirements_extra.txt
-#
-# Also need data I/O (if missing in dinov3):
-#   pip install openpyxl pandas scikit-learn
-
-optuna>=3.6.0
-tqdm>=4.66.0
-openpyxl>=3.1.0

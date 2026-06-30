@@ -1,21 +1,5 @@
 {
   "val_start": "2025-04-03",
-  "trees": [
-    "lgb",
-    "xgb",
-    "cat"
-  ],
-  "rnn_models": [
-    "gru"
-  ],
-  "rnn": {
-    "seq": 96,
-    "train_rows": 20000,
-    "units": 64,
-    "epochs": 20,
-    "batch_size": 512,
-    "lr": 0.001,
-    "dropout": 0.1
-  },
+  "trees": ["lgb", "xgb", "cat"],
   "stack_alpha": 1.0
 }

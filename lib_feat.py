@@ -1,12 +1,14 @@
-# [C] 特征工程 — 记忆：时8 + 滞3 + 滑2 + 傅10 = 23新 + 7原 = 30
+# [C] 特征工程（比赛）— 记忆：时8 + 滞4 + 滑2 + 傅10 = 24新 + 7原 = 31
 import numpy as np
+import pandas as pd
 
 TIME, TARGET = 'date', '全口径发购'
 ORIG = ['降水(mm)', '湿度(%)', '温度(℃)', '平均风速(m/s)', 'DATA_WEEK', 'IS_ZM', 'IS_FDJJR']
+LAG_YEAR = 365 * 96  # 365 days @ 15min
 
 
 def build(df, full=True):
-    """full=False→7维debug；full=True→30维"""
+    """full=False→7维 debug；full=True→31维 baseline"""
     if not full:
         return df, ORIG.copy()
     dt = df[TIME]
@@ -19,7 +21,7 @@ def build(df, full=True):
     df['dow_sin'] = np.sin(2*np.pi*df['dayofweek']/7)
     df['dow_cos'] = np.cos(2*np.pi*df['dayofweek']/7)
     df['is_weekend'] = (df['dayofweek'] >= 5).astype(float)
-    for lag in (96, 192, 672):
+    for lag in (96, 192, 672, LAG_YEAR):
         df[f'lag_{lag}'] = df[TARGET].shift(lag)
     s = df[TARGET].shift(1)
     df['rolling_mean_96'] = s.rolling(96, min_periods=1).mean()
